@@ -21,3 +21,5 @@ draft-vesco-perugini-tuveri-tls-ssi.xml
 package-lock.json
 report.xml
 !requirements.txt
+.DS_Store
+
