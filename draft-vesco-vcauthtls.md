@@ -1,7 +1,7 @@
 ---
 title: "Transport Layer Security (TLS) Authentication with Verifiable Credential (VC)"
 abbrev: "TODO - Abbreviation"
-category: info
+category: std
 
 docname: draft-vesco-vcauthtls-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
