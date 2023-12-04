@@ -68,7 +68,7 @@ informative:
 
 --- abstract
 
-This document defines a new certificate type and extension for the exchange of Verifiable Credentials in the handshake of the Transport Layer Security (TLS) protocol. The new certificate type is intended to add the Verifiable Credentials as a new means of authentication. The resulting authentication process leverages a distributed ledger as the root-of-trust of the TLS endpoints' public keys. The endpoints can use different distributed ledger technologies to store their public keys and to perform the TLS handshake.
+This document defines a new certificate type and extension for the exchange of Verifiable Credentials in the handshake of the Transport Layer Security (TLS) protocol. The new certificate type is intended to add the Verifiable Credentials as a new means of authentication. The resulting authentication process leverages a distributed ledger as the root of trust of the TLS endpoints' public keys. The endpoints can use different distributed ledger technologies to store their public keys and to perform the TLS handshake.
 
 
 --- middle
