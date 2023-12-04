@@ -35,11 +35,6 @@ author:
     organization: LINKS Foundation
     email: leonardo.perugini@linksfoundation.com
 
- -
-    fullname: Nicola Tuveri
-    organization: Tampere University
-    email: nic.tuv@gmail.com
-
 normative:
     RFC8446:
     RFC7250:
