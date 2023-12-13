@@ -81,6 +81,31 @@ After that, the node can request a VC from one of the Issuers available in the s
 The combination of the key pair (_sk_, _pk_), the DID and at least one VC forms the identity compliant with the SSI model.
 A node requests access to services by presenting a Verfiable Presentation {{VP}}. The VP is an envelop of the VC signed by the node holding the VC with its _sk_. The verifier authenticates the node checking the validity and authenticity of the VP and the inner VC before granting or denying access to the requesting node.
 
+~~~~~
+                              --------
+                             | Entity |
+                             |        |
+                              --------
+                            identity = [{pk,sk}]
+
+                              --------
+                             | Entity |                        pk                         -----
+                             |        | -----------------------------------------------> | DLT |
+                              --------                                                   |     |
+                            identity = [{pk,sk},DID]                                      -----
+
+ --------    request VC       --------
+| Issuer | <---------------- | Entity |
+|        | ----------------> |        |
+ --------        VC           --------
+                            identity = [{pk,sk},DID,VC]
+
+                              --------         VP(VC)      ----------     DID resolve     -----
+                             | Entity | ----------------> | Verifier | ----------------> | DLT |
+                             |        | <---------------- |          | <---------------- |     |
+                              --------        ok/ko        ----------          pk         -----
+~~~~~
+
 The current implementations of the authentication process run at the Application layer. A client node estabhlishes a TLS channel authenticating the server node with the server's X.509 certificate. Then the server node authenticates the client node that sends its VP at application layer (i.e. over the TLS channel already established). The mutual authentication with VPs occurs when also the server node exchanges its VP with the client node again at application layer.
 
 SSI is emerging as an identity option for Internet of Thing and Edge nodes in computing continuum environments. In these scenarios, (mutual) authentication with VP can take place directly at the TLS protocol layer, enabling the peer-to-peer interaction model envisaged by the SSI model.
