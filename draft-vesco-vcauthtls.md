@@ -79,7 +79,7 @@ The Self-Sovereign Identity (SSI) is a decentralised identity model that gives a
 An entity's DID is a pointer to the distributed ledger where other entities can retrieve its _pk_. A DID is a Uniform Resource Identifier (URI) in the form ``did:did-method-name:method-specific-id`` where ``method-name`` is the name of the {{DID}} Method used to interact with the distributed ledger and ``method-specific-id`` is the pointer to the {{DID}} Document that contains _pk_, stored in the distributed ledger.
 After that, the entity can request a VC from one of the Issuers available in the system. The VC contains the metadata to describe properties of the credential, the DID and the claims about the identity of the entity and the signature of the Issuer.
 The combination of the key pair (_sk_, _pk_), the DID and at least one VC forms the identity compliant with the SSI model.
-An entity requests access to services by presenting a Verifiable Presentation {{VP}}. The VP is an envelop of the VC signed by the entity holding the VC with its _sk_. The verifier authenticates the entity checking the validity and authenticity of the VP and the inner VC before granting or denying access to the requesting entity.
+An entity requests access to services by presenting a Verifiable Presentation {{VP}}. The VP is an envelop of the VC signed by the entity holding the VC with its _sk_. The verifier authenticates the entity checking the validity and authenticity of the VP and the inner VC before granting or denying access to the requesting entity. {{fig-ssi-steps}} shows step by step the generation of the identity and the authentication with VP.
 
 ~~~~~
                               --------
@@ -105,6 +105,8 @@ An entity requests access to services by presenting a Verifiable Presentation {{
                              |        | <---------------- |          | <---------------- |     |
                               --------        ok/ko        ----------          pk         -----
 ~~~~~
+{: #fig-ssi-steps artwork-align="center"
+    title="Generation of the identity compliant with the SSI model and authentication with VP"}
 
 The current implementations of the authentication process run at the application layer. A client estabhlishes a TLS channel authenticating the server with the server's X.509 certificate. Then the server authenticates the client that sends its VP at application layer (i.e. over the TLS channel already established). The mutual authentication with VPs occurs when also the server exchanges its VP with the client again at application layer.
 
