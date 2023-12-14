@@ -105,7 +105,7 @@ An entity requests access to services by presenting a Verifiable Presentation {{
                              |        | <---------------- |          | <---------------- |     |
                               --------        ok/ko        ----------          pk         -----
 ~~~~~
-{: #fig-ssi-steps artwork-align="center"
+{: #fig-ssi-steps artwork-align="left"
     title="Generation of the identity compliant with the SSI model and authentication with VP"}
 
 The current implementations of the authentication process run at the application layer. A client estabhlishes a TLS channel authenticating the server with the server's X.509 certificate. Then the server authenticates the client that sends its VP at application layer (i.e. over the TLS channel already established). The mutual authentication with VPs occurs when also the server exchanges its VP with the client again at application layer.
