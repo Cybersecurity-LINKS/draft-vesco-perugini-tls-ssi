@@ -412,4 +412,4 @@ To be addressed
 # Acknowledgments
 {:numbered="false"}
 
-To be done.
+We would like to thank Nicola Tuveri for his very helpful suggestions in the preparation of the first version of this document.
