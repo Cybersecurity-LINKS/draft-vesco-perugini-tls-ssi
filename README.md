@@ -29,10 +29,10 @@ Command line usage requires that you have the necessary software installed.  See
 [the instructions](https://github.com/martinthomson/i-d-template/blob/main/doc/SETUP.md).
 
 # Running Code
-The implementation of this technical specification is available on GitHub
+The code implementing this technical specification is available as open source for anyone who wishes to contribute.
 
-**OpenSSL** with proper modification to work with VCs and DIDs 
+**OpenSSL** with appropriate modifications to work with VCs and DIDs
 https://github.com/Cybersecurity-LINKS/openssl
 
-**Provider** implementing the required SSI functions
+**Provider** that implements the required SSI functions
 https://github.com/Cybersecurity-LINKS/openssl-ssi-provider
