@@ -36,8 +36,10 @@ author:
     email: leonardo.perugini@linksfoundation.com
 
 normative:
-    RFC8446:
+    RFC5996:
+    RFC6071:
     RFC7250:
+    RFC8446:
 
 informative:
       DID:
@@ -410,7 +412,8 @@ DLT          Client                                              Server
 All the security considerations presented in {{RFC8446}} applies to this document as well.
 Further considerations can be made on the DID resolution process. Assuming that a DID resolution is performed in clear, a man-in-the-middle could impersonate the DLT node, forge a DID Document containing the authenticating endpoint's DID, associate it with a key pair that he owns, and then return it to the DID resolver. Thus, the attacker is able to compute a valid CertificateVerify message by possessing the long term private key. In practice, the man-in-the-middle attacker breaks in transit the immutability feature provided by the DLT, i.e. the RoT for the public keys.
 A possible solution to this attack is to esthablish a TLS channel towards the DLT node and authenticate only the latter to rely on the received data. The DLT node MUST be authenticated through an X.509 certificate. The session resumption and 0 round-trip time (0-RTT) features of TLS 1.3 can be used to reduce the overhead of establishing this TLS channel.
-In addition, since confidentiality is not a requirement for DID resolution, another solution is to configure the DLT node to sign the replies such that the DID resolver can verify the origin and the integrity of the data received.
+In addition, the communication with the DLT node can be protected with Internet Protocol Security
+(IPsec) {{RFC6071}} and Internet Key Exchange (IKE) {{RFC5996}} in endpoint-to-endpoint transport mode for even better performance in term of latency of DID resolution.
 
 
 # IANA Considerations
@@ -423,4 +426,4 @@ To be addressed
 # Acknowledgments
 {:numbered="false"}
 
-We would like to thank Nicola Tuveri for his very helpful suggestions in the preparation of the first version of this document.
+We would like to thank Nicola Tuveri for his very helpful suggestions during the preparation of the first version of this technical specification.
