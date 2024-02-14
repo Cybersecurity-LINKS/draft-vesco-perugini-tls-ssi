@@ -126,15 +126,14 @@ This document uses _italic formatting_ in the following sections to mark some pa
 
 ## client_certificate_type and server_certificate_type extensions
 
-The TLS extensions ``client_certificate_type`` and ``server_certificate_type`` defined in {{RFC7250}} are used to negotiate the type of ``Certificate`` messages used in TLS to authenticate the server and, optionally, the client. This section defines a new certificate type, called ``VC``, for the TLS 1.3 handshake. The updated ``CertificateType`` enumeration, the corresponding addition to the ``CertificateEntry`` structure, and the ``Certificate`` message structure are shown below.
-In the current version of the document ``VC`` certificate type is set to 224, one of the values indicated by IANA for private use. ``CertificateType`` values are sent in the ``server_certificate_type`` and ``client_certificate_type`` extensions, and the ``CertificateEntry`` structures are included in the certificate chain sent in the ``Certificate`` message.
+The TLS extensions ``client_certificate_type`` and ``server_certificate_type`` defined in {{RFC7250}} are used to negotiate the type of ``Certificate`` messages used in TLS to authenticate the server and, optionally, the client. This section defines a new certificate type, called ``VC``, for the TLS 1.3 handshake. The updated ``CertificateType`` enumeration, the corresponding addition to the ``CertificateEntry`` structure, and the ``Certificate`` message structure are shown below. ``CertificateType`` values are sent in the ``server_certificate_type`` and ``client_certificate_type`` extensions, and the ``CertificateEntry`` structures are included in the certificate chain sent in the ``Certificate`` message.
 
 ~~~
 /* Managed by IANA */
 enum {
    X509(0),
    RawPublicKey(2),
-   VC(224),
+   VC(TBD),
    (255)
 } CertificateType;
 
@@ -165,13 +164,14 @@ As per {{RFC7250}}, the client will send a list of certificate types in ``[endpo
 
 # did_methods extension
 
-This section defines the ``did_methods`` extension, used as part of an extended TLS 1.3 handshake when ``VC`` certificate type is used. ``ExtensionType`` now contains the ``did_methods`` entry associated with the value 65282, indicated by IANA for private use.
+This section defines the ``did_methods`` extension, used as part of an extended TLS 1.3 handshake when ``VC`` certificate type is used. ``ExtensionType`` now contains the ``did_methods`` entry.
 
 ~~~
 enum {
    server_name(0),
    max_fragment_length(1),
-   did_methods(65282),
+   ..,
+   did_methods(TBD),
    (65535)
 } ExtensionType;
 ~~~
