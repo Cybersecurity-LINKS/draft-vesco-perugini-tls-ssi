@@ -21,8 +21,8 @@ venue:
   type:
   mail:
   arch:
-  github: 
-  latest: 
+  github: Cybersecurity-LINKS/draft-vesco-vcauthtls
+  latest:
 
 author:
  -
