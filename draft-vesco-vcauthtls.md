@@ -1,6 +1,6 @@
 ---
 title: "Transport Layer Security (TLS) Authentication with Verifiable Credential (VC)"
-abbrev: "TODO - Abbreviation"
+abbrev: "TLS Auth with VC"
 category: std
 
 docname: draft-vesco-vcauthtls-latest
@@ -17,12 +17,12 @@ keyword:
  - DID
  - DLT
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: Cybersecurity-LINKS/draft-vesco-vcauthtls
-  latest: https://example.com/LATEST
+  group:
+  type:
+  mail:
+  arch:
+  github: 
+  latest: 
 
 author:
  -
