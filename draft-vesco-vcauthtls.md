@@ -36,7 +36,8 @@ author:
     email: leonardo.perugini@linksfoundation.com
 
 normative:
-    RFC5996:
+    RFC7296:
+    RFC4301:
     RFC6071:
     RFC7250:
     RFC8446:
@@ -180,9 +181,9 @@ This extension contains a list of DID Methods an endpoint supports, i.e. a set o
 
 ~~~
 enum {
-   btcr(0),
-   ethr(1),
-   iota(2),
+   name0(0),
+   name1(1),
+   name2(2),
    ..
    (65535)
 } DIDMethod
@@ -413,8 +414,11 @@ All the security considerations presented in {{RFC8446}} applies to this documen
 Further considerations can be made on the DID resolution process. Assuming that a DID resolution is performed in clear, a man-in-the-middle could impersonate the DLT node, forge a DID Document containing the authenticating endpoint's DID, associate it with a key pair that he owns, and then return it to the DID resolver. Thus, the attacker is able to compute a valid CertificateVerify message by possessing the long term private key. In practice, the man-in-the-middle attacker breaks in transit the immutability feature provided by the DLT, i.e. the RoT for the public keys.
 A possible solution to this attack is to esthablish a TLS channel towards the DLT node and authenticate only the latter to rely on the received data. The DLT node MUST be authenticated through an X.509 certificate. The session resumption and 0 round-trip time (0-RTT) features of TLS 1.3 can be used to reduce the overhead of establishing this TLS channel.
 In addition, the communication with the DLT node can be protected with Internet Protocol Security
-(IPsec) {{RFC6071}} and Internet Key Exchange (IKE) {{RFC5996}} in endpoint-to-endpoint transport mode for even better performance in term of latency of DID resolution.
+(IPsec) {{RFC4301}} {{RFC6071}}  and Internet Key Exchange Version 2 (IKEv2) {{RFC7296}} in endpoint-to-endpoint transport mode for even better performance in term of latency of DID resolution.
 
+# Privacy Considerations
+Even though the ``did_methods`` extension in the ``ClientHello`` message is sent in clear no privacy issues arise as its content is not considered strictly confidential.
+However, privacy issues can arise when the client resolves the server's DID on a public DLT node. The DLT node can monitor all the servers a client connects to. This problem disappears when DLT nodes are deployed as an integral part of the IoT system itself.
 
 # IANA Considerations
 
