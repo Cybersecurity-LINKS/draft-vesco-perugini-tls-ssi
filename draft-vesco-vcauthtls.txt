@@ -640,11 +640,6 @@ Figure 1: Generation of the identity compliant with the SSI model and
               Internet Protocol", RFC 4301, DOI 10.17487/RFC4301,
               December 2005, <https://www.rfc-editor.org/rfc/rfc4301>.
 
-   [RFC6071]  Frankel, S. and S. Krishnan, "IP Security (IPsec) and
-              Internet Key Exchange (IKE) Document Roadmap", RFC 6071,
-              DOI 10.17487/RFC6071, February 2011,
-              <https://www.rfc-editor.org/rfc/rfc6071>.
-
    [RFC7250]  Wouters, P., Ed., Tschofenig, H., Ed., Gilmore, J.,
               Weiler, S., and T. Kivinen, "Using Raw Public Keys in
               Transport Layer Security (TLS) and Datagram Transport
@@ -672,6 +667,11 @@ Figure 1: Generation of the identity compliant with the SSI model and
    [DID-Registries]
               W3C, "DID Specification Registries", September 2023,
               <https://www.w3.org/TR/did-spec-registries/#did-methods>.
+
+   [RFC6071]  Frankel, S. and S. Krishnan, "IP Security (IPsec) and
+              Internet Key Exchange (IKE) Document Roadmap", RFC 6071,
+              DOI 10.17487/RFC6071, February 2011,
+              <https://www.rfc-editor.org/rfc/rfc6071>.
 
    [VC]       W3C, "Verifiable Credentials Data Model v2.0", November
               2023, <https://www.w3.org/TR/vc-data-model-2.0/>.
