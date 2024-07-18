@@ -38,11 +38,11 @@ author:
 normative:
     RFC7296:
     RFC4301:
-    RFC6071:
     RFC7250:
     RFC8446:
 
 informative:
+      RFC6071:
       DID:
          title: Decentralized Identifiers (DIDs) v1.0
          date: July 2022
