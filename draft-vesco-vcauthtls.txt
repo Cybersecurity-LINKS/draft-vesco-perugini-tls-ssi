@@ -608,9 +608,10 @@ Figure 1: Generation of the identity compliant with the SSI model and
    (0-RTT) features of TLS 1.3 can be used to reduce the overhead of
    establishing this TLS channel.  In addition, the communication with
    the DLT node can be protected with Internet Protocol Security (IPsec)
-   [RFC4301] [RFC6071] and Internet Key Exchange Version 2 (IKEv2)
-   [RFC7296] in endpoint-to-endpoint transport mode for even better
-   performance in term of latency of DID resolution.
+   [RFC4301] [RFC6071] in endpoint-to-endpoint transport mode for even
+   better performance in term of latency of DID resolution.  Mutual
+   authentication in Internet Key Exchange Version 2 (IKEv2) [RFC7296]
+   can be performed with raw public keys.
 
 8.  Privacy Considerations
 
