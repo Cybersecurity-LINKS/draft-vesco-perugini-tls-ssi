@@ -417,8 +417,7 @@ In addition, the communication with the DLT node can be protected with Internet 
 (IPsec) {{RFC4301}} {{RFC6071}} in endpoint-to-endpoint transport mode for even better performance in term of latency of DID resolution. Mutual authentication in Internet Key Exchange Version 2 (IKEv2) {{RFC7296}} can be performed with raw public keys.
 
 # Privacy Considerations
-Even though the ``did_methods`` extension in the ``ClientHello`` message is sent in clear no privacy issues arise as its content is not considered strictly confidential.
-However, privacy issues can arise when the client resolves the server's DID on a public DLT node. The DLT node can monitor all the servers a client connects to. This problem disappears when DLT nodes are deployed as an integral part of the IoT system itself.
+Privacy issues can arise when the client resolves the server's DID on a public DLT node. The DLT node can monitor all the servers a client connects to. This problem disappears when DLT nodes are deployed as an integral part of the IoT system itself.
 
 # IANA Considerations
 
